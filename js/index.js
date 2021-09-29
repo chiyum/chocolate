@@ -19,10 +19,12 @@ function setActive(i){
     //圖標
 }
 
+let turn = 0;
 
 for(let j = 0 ; j<btn.length; j++){
     btn[j].addEventListener('click',function(){
-        setActive(j)
+        setActive(j);
+        turn = j;
         //雖然for跑過一次讓每個btn都吃到addevent
         //晚點再理解。
     })
@@ -30,7 +32,6 @@ for(let j = 0 ; j<btn.length; j++){
 
 
 //計時器
-let turn = 0;
 
 function tackTurn(){
     if(turn == imgbx.length -1){
